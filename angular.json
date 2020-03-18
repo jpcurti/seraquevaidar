@@ -128,12 +128,8 @@
       }
     }
   },
-<<<<<<< HEAD
-  "defaultProject": "papel-higienico-counter"
-=======
   "defaultProject": "papel-higienico-counter",
   "cli": {
     "analytics": false
   }
->>>>>>> 4ae4078e01fa154cd2a185f2f81ef6fe31c812af
 }
