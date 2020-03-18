@@ -1,2 +1,0 @@
-# seraquevaidar
-Coroninha e noise
