@@ -22,6 +22,15 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+## Deploying to Firebase
+
+After running `ng build --prod` run `firebase deploy` to deploy the application to the firebase server. 
+
+If you want to open then run `firebase open` and select `Hosting: Deployed Site`.
+
+The other possible URL is:
+[https://seraqueopapelvaidar.web.app/](https://seraqueopapelvaidar.web.app/)
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

@@ -1,16 +1,38 @@
-<div class="container">
-    <p class="title has-text-centered is-size-4" style="margin-top: 10px;">Sera que o papel vai dar?</p>
-</div>
-<div class="container">
-    <nav class="level">
-        <div class="level-item">
-            <img alt="" style="height: 90px; margin-top: 20px;" src="../../assets/paper.png">
-        </div>
-    </nav>
+<div class="section padding-top">
+    <!--Title and logo-->
+    <div class="container">
+        <p class="title has-text-centered is-size-4">Sera que o papel vai dar?</p>
+        <nav class="level">
+            <div class="level-item">
+                <img alt="" class="logo" src="../../assets/paper.png">
+            </div>
+        </nav>
+    </div>
 
-    <nav class="level">
-        <div class="level-item notification">
-            <span>Você vai sobreviver X dias</span>
-        </div>
-    </nav>
+    <!--Result message-->
+    <div class="container margin-top">
+        <nav class="level">
+            <div class="level-item notification is-info is-size-5">
+                <span>Você vai sobreviver {{daysSurviving}} dias</span>
+            </div>
+        </nav>
+
+    </div>
+    
+    <!--The sliders for the inputs-->
+    <div class="container">
+        
+        <h1 class="is-size-5 no-margin-bottom margin-top">Quantidade de rolos estocados: {{rolls}}</h1>
+        <mat-slider (change)="calculateDays()" [(value)]="rolls" min="1" max="100" step="1"></mat-slider>
+
+        <h1 class="is-size-5 no-margin-bottom margin-top">Pessoas na casa: {{numPeople}}</h1>
+        <mat-slider (change)="calculateDays()" [(value)]="numPeople" min="1" max="10" step="1"></mat-slider>
+
+        <h1 class="is-size-5 no-margin-bottom margin-top">Folhas usadas por ida ao trono: {{sheetsPerUse}}</h1>
+        <mat-slider (change)="calculateDays()" [(value)]="sheetsPerUse" min="1" max="50" step="1"></mat-slider>
+        
+        <h1 class="is-size-5 no-margin-bottom margin-top">Folhas por rolo: {{sheetsPerRoll}}</h1>
+        <mat-slider (change)="calculateDays()" [(value)]="sheetsPerRoll" min="1" max="500" step="1"></mat-slider>
+    
+    </div>
 </div>
