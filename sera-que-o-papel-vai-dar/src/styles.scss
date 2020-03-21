@@ -11,3 +11,6 @@ $my-app-accent:  mat-palette($mat-blue, 500, 900, A100);
 $my-app-warn:    mat-palette($mat-deep-orange);
 $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 @include angular-material-theme($my-app-theme);
+
+// adding for the share-buttons styling
+@import '~@ngx-share/button/themes/default/default-theme';

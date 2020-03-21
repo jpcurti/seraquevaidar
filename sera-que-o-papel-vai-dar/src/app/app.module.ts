@@ -7,6 +7,14 @@ import { MainComponent } from './main/main.component';
 import {MatSliderModule} from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ShareButtonsModule } from '@ngx-share/buttons';
+
+import { HttpClientModule } from '@angular/common/http';
+
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faCoffee, fas } from '@fortawesome/free-solid-svg-icons';
+import { awesome_icons } from '../icons';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,9 +23,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
+    ShareButtonsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas);
+    library.addIcons(...awesome_icons);
+  }
+}
