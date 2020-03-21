@@ -7,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  numPeople: number = 2;
+  numPeople: number = 1;
   sheetsPerUse: number = 20;
   usesPerDay: number = 2;
   daysSurviving: number = 0;
   rolls: number = 16;
   sheetsPerRoll: number = 200;
-  percentageSurviving = 0;
-  quarentineDays=14;
+  percentageSurviving: number = 0;
+  quarentineDays: number =14;
 
   constructor() { }
 

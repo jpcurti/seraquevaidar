@@ -28,14 +28,17 @@
         <h1 class="is-size-5 no-margin-bottom margin-top">Pessoas na casa: {{numPeople}}</h1>
         <mat-slider (change)="calculateDays()" [(value)]="numPeople" min="1" max="10" step="1"></mat-slider>
 
-        <h1 class="is-size-5 no-margin-bottom margin-top">Folhas usadas por visita ao toilette: {{sheetsPerUse}}</h1>
+        <h1 class="is-size-5 no-margin-bottom margin-top">Folhas usadas por visita ao banheiro: {{sheetsPerUse}}</h1>
         <mat-slider (change)="calculateDays()" [(value)]="sheetsPerUse" min="1" max="50" step="1"></mat-slider>
 
-        <h1 class="is-size-5 no-margin-bottom margin-top">Idas ao toillete por dia: {{usesPerDay}}</h1>
+        <h1 class="is-size-5 no-margin-bottom margin-top">Idas ao banheiro por dia: {{usesPerDay}}</h1>
         <mat-slider (change)="calculateDays()" [(value)]="usesPerDay" min="1" max="10" step="1"></mat-slider>
         
         <h1 class="is-size-5 no-margin-bottom margin-top">Folhas por rolo: {{sheetsPerRoll}}</h1>
         <mat-slider (change)="calculateDays()" [(value)]="sheetsPerRoll" min="1" max="500" step="1"></mat-slider>
+
+        <h1 class="is-size-5 no-margin-bottom margin-top">Período de quarentena: {{quarentineDays}}</h1>
+        <mat-slider (change)="calculateDays()" [(value)]="quarentineDays" min="14" max="500" step="1"></mat-slider>
     
     </div>
 </div>
