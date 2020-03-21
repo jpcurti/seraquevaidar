@@ -1,7 +1,8 @@
 <div class="section padding-top">
     <!--Title and logo-->
     <div class="container">
-        <p class="title has-text-centered is-size-4">Será que o papel vai dar?</p>
+        <p class="title has-text-centered is-size-3">Será que o papel vai dar?</p>
+        <p class="title has-text-centered is-size-5">Um guia para saber se você aguenta até o final da quarentena</p>
         <nav class="level">
             <div class="level-item">
                 <img alt="" class="logo" src="../../assets/paper.png">
@@ -27,10 +28,10 @@
         <h1 class="is-size-5 no-margin-bottom margin-top">Pessoas na casa: {{numPeople}}</h1>
         <mat-slider (change)="calculateDays()" [(value)]="numPeople" min="1" max="10" step="1"></mat-slider>
 
-        <h1 class="is-size-5 no-margin-bottom margin-top">Folhas usadas por ida ao trono: {{sheetsPerUse}}</h1>
+        <h1 class="is-size-5 no-margin-bottom margin-top">Folhas usadas por visita ao toilette: {{sheetsPerUse}}</h1>
         <mat-slider (change)="calculateDays()" [(value)]="sheetsPerUse" min="1" max="50" step="1"></mat-slider>
 
-        <h1 class="is-size-5 no-margin-bottom margin-top">Idas ao trono por dia: {{usesPerDay}}</h1>
+        <h1 class="is-size-5 no-margin-bottom margin-top">Idas ao toillete por dia: {{usesPerDay}}</h1>
         <mat-slider (change)="calculateDays()" [(value)]="usesPerDay" min="1" max="10" step="1"></mat-slider>
         
         <h1 class="is-size-5 no-margin-bottom margin-top">Folhas por rolo: {{sheetsPerRoll}}</h1>
