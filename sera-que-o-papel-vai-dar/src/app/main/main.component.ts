@@ -11,7 +11,7 @@ export class MainComponent implements OnInit {
   sheetsPerUse: number = 20;
   usesPerDay: number = 2;
   daysSurviving: number = 0;
-  rolls: number = 16;
+  rolls: number = 10;
   sheetsPerRoll: number = 200;
   percentageSurviving: number = 0;
   quarentineDays: number =14;

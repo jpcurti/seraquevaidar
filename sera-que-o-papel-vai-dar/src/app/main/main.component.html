@@ -13,7 +13,7 @@
     <!--Result message-->
     <div class="container margin-top">
         <nav class="level">
-            <div class="level-item notification is-info is-size-5">
+            <div [class.is-danger]='(percentageSurviving<25)' [class.is-warning]='(percentageSurviving<75)' [class.is-info]='(percentageSurviving<100)' [class.is-success]='(percentageSurviving>=100)' class="level-item notification is-size-5">
                 <span>Você vai sobreviver {{daysSurviving}} dias ou {{percentageSurviving}}% do seu período de quarentena</span>
             </div>
         </nav>
