@@ -12,7 +12,6 @@ import { ShareButtonsModule } from '@ngx-share/buttons';
 import { HttpClientModule } from '@angular/common/http';
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faCoffee, fas } from '@fortawesome/free-solid-svg-icons';
 import { awesome_icons } from '../icons';
 
 @NgModule({
@@ -32,7 +31,6 @@ import { awesome_icons } from '../icons';
 })
 export class AppModule {
   constructor(library: FaIconLibrary) {
-    library.addIconPacks(fas);
     library.addIcons(...awesome_icons);
   }
 }

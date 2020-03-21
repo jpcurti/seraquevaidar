@@ -1,5 +1,3 @@
-import { library } from '@fortawesome/fontawesome-svg-core';
-
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF';
