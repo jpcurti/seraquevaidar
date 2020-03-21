@@ -13,6 +13,8 @@ export class MainComponent implements OnInit {
   daysSurviving: number = 0;
   rolls: number = 16;
   sheetsPerRoll: number = 200;
+  percentageSurviving = 0;
+  quarentineDays=14;
 
   constructor() { }
 
@@ -24,6 +26,7 @@ export class MainComponent implements OnInit {
     let totalUsedSheetsPerDay = (this.sheetsPerUse * this.usesPerDay * this.numPeople);
     let totalAvailableSheets = (this.rolls * this.sheetsPerRoll);
     this.daysSurviving = Math.floor(totalAvailableSheets / totalUsedSheetsPerDay);
+    this.percentageSurviving = Math.floor((this.daysSurviving/this.quarentineDays)*100);
   }
 
 }
