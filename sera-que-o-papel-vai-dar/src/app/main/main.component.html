@@ -1,0 +1,55 @@
+<div class="section padding-top">
+        <!--Title and logo-->
+        <div class="container">
+            <nav class="level">
+                <div class="level-item">
+                    <img alt="" class="logo" src="../../assets/rotolo.svg">
+                </div>
+            </nav>
+            <p class="title has-text-centered is-size-3">Será que o papel vai dar?</p>
+            <p class="title has-text-centered is-size-5">Um guia para saber se você aguenta até o final da quarentena do COVID-19</p>
+        </div>
+    
+        <!--Result message-->
+        <div class="container margin-top">
+            <nav class="level">
+                <div class="level-item notification is-info is-size-5">
+                    <span>Você vai sobreviver {{daysSurviving}} dias ou {{percentageSurviving}}% do seu período de quarentena</span>
+                </div>
+            </nav>
+        </div>
+        
+        <!--The sliders for the inputs-->
+        <div class="container">
+            
+            <h1 class="is-size-5 no-margin-bottom margin-top">Quantidade de rolos estocados: {{rolls}}</h1>
+            <mat-slider (change)="calculateDays()" [(value)]="rolls" min="1" max="100" step="1"></mat-slider>
+    
+            <h1 class="is-size-5 no-margin-bottom margin-top">Pessoas na casa: {{numPeople}}</h1>
+            <mat-slider (change)="calculateDays()" [(value)]="numPeople" min="1" max="10" step="1"></mat-slider>
+    
+            <h1 class="is-size-5 no-margin-bottom margin-top">Folhas usadas por visita ao banheiro: {{sheetsPerUse}}</h1>
+            <mat-slider (change)="calculateDays()" [(value)]="sheetsPerUse" min="1" max="50" step="1"></mat-slider>
+    
+            <h1 class="is-size-5 no-margin-bottom margin-top">Idas ao banheiro por dia: {{usesPerDay}}</h1>
+            <mat-slider (change)="calculateDays()" [(value)]="usesPerDay" min="1" max="10" step="1"></mat-slider>
+            
+            <h1 class="is-size-5 no-margin-bottom margin-top">Folhas por rolo: {{sheetsPerRoll}}</h1>
+            <mat-slider (change)="calculateDays()" [(value)]="sheetsPerRoll" min="1" max="500" step="1"></mat-slider>
+    
+            <h1 class="is-size-5 no-margin-bottom margin-top">Período de quarentena: {{quarentineDays}}</h1>
+            <mat-slider (change)="calculateDays()" [(value)]="quarentineDays" min="1" max="120" step="1"></mat-slider>
+        
+        </div>
+    
+        <!-- <div>
+                <share-buttons [theme]="'default'"
+                [include]="['facebook','twitter','telegram','messenger','whatsapp','email']"
+                [show]="5"
+                [showText]="true"
+                [url]="'https://seraqueopapelvaidar.web.app/'"
+                [autoSetMeta]="false"
+               ></share-buttons>
+        </div> -->
+    
+    </div>
