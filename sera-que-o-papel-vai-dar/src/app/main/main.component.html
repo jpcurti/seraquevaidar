@@ -61,7 +61,7 @@
             <h1 class="is-size-5 no-margin-bottom margin-top">Folhas por rolo: {{sheetsPerRoll}}</h1>
             <mat-slider [(value)]="sheetsPerRoll" (input)="sheetsPerRoll = $event.value; calculateDays()"min="1" max="500" step="1"></mat-slider>
 
-            <h1 class="is-size-5 no-margin-bottom margin-top">Período de quarentena: {{quarentineDays}}</h1>
+            <h1 class="is-size-5 no-margin-bottom margin-top">Período de quarentena: {{quarentineDays}} dias</h1>
             <mat-slider [(value)]="quarentineDays" (input)="quarentineDays = $event.value; calculateDays()"min="1" max="120" step="1"></mat-slider>
         </div>
     </div>
