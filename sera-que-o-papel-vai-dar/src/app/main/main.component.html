@@ -42,10 +42,10 @@
     <div class="container">
 
         <h1 class="is-size-5 no-margin-bottom margin-top">Quantidade de rolos estocados: {{rolls}}</h1>
-        <mat-slider (change)="calculateDays()" [(value)]="rolls" min="1" max="100" step="1"></mat-slider>
-
+        <mat-slider (change)="calculateDays()" [(value)]="rolls" (input)="rolls = $event.value" min="1" max="100" step="1"></mat-slider>
+        
         <h1 class="is-size-5 no-margin-bottom margin-top">Pessoas na casa: {{numPeople}}</h1>
-        <mat-slider (change)="calculateDays()" [(value)]="numPeople" min="1" max="10" step="1"></mat-slider>
+        <mat-slider (change)="calculateDays()" [(value)]="numPeople" (input)="rolls = $event.value" min="1" max="10" step="1"></mat-slider>
 
         <div class="buttons">
             <button (click)="toggleAdvanced()" class="button is-info">Avançado</button>
@@ -53,16 +53,16 @@
 
         <div *ngIf=showAdvancedOptions class="container">
             <h1 class="is-size-5 no-margin-bottom margin-top ">Folhas usadas por visita ao banheiro: {{sheetsPerUse}}</h1>
-            <mat-slider (change)="calculateDays()" [(value)]="sheetsPerUse" min="1" max="50" step="1"></mat-slider>
-
+            <mat-slider (change)="calculateDays()" [(value)]="sheetsPerUse" (input)="sheetsPerUse = $event.value" min="1" max="50" step="1"></mat-slider>
+            
             <h1 class="is-size-5 no-margin-bottom margin-top">Idas ao banheiro por dia: {{usesPerDay}}</h1>
-            <mat-slider (change)="calculateDays()" [(value)]="usesPerDay" min="1" max="10" step="1"></mat-slider>
+            <mat-slider (change)="calculateDays()" [(value)]="usesPerDay" (input)="usesPerDay = $event.value"min="1" max="10" step="1"></mat-slider>
 
             <h1 class="is-size-5 no-margin-bottom margin-top">Folhas por rolo: {{sheetsPerRoll}}</h1>
-            <mat-slider (change)="calculateDays()" [(value)]="sheetsPerRoll" min="1" max="500" step="1"></mat-slider>
+            <mat-slider (change)="calculateDays()" [(value)]="sheetsPerRoll" (input)="sheetsPerRoll = $event.value"min="1" max="500" step="1"></mat-slider>
 
             <h1 class="is-size-5 no-margin-bottom margin-top">Período de quarentena: {{quarentineDays}}</h1>
-            <mat-slider (change)="calculateDays()" [(value)]="quarentineDays" min="1" max="120" step="1"></mat-slider>
+            <mat-slider (change)="calculateDays()" [(value)]="quarentineDays" (input)="quarentineDays = $event.value"min="1" max="120" step="1"></mat-slider>
         </div>
     </div>
 
