@@ -15,7 +15,7 @@ export class MainComponent implements OnInit {
   sheetsPerRoll: number = 200;
   percentageSurviving: number = 0;
   quarentineDays: number = 14;
-  hideAdvancedOptions: boolean = true;
+  showAdvancedOptions: boolean = false;
 
   constructor() { }
 
@@ -31,7 +31,7 @@ export class MainComponent implements OnInit {
   }
 
   toggleAdvanced(){
-  this.hideAdvancedOptions = !(this.hideAdvancedOptions);
+  this.showAdvancedOptions = !(this.showAdvancedOptions);
   
   }
 

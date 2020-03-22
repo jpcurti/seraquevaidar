@@ -51,7 +51,7 @@
             <button (click)="toggleAdvanced()" class="button is-info">Avançado</button>
           </div>
 
-        <div [class.is-hidden-desktop]=hideAdvancedOptions class="container" id="advancedOptions">
+        <div *ngIf=showAdvancedOptions class="container">
             <h1 class="is-size-5 no-margin-bottom margin-top ">Folhas usadas por visita ao banheiro: {{sheetsPerUse}}</h1>
             <mat-slider (change)="calculateDays()" [(value)]="sheetsPerUse" min="1" max="50" step="1"></mat-slider>
 
