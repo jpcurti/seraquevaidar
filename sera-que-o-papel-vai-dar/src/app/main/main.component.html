@@ -55,7 +55,7 @@
             <h1 class="is-size-5 no-margin-bottom margin-top ">Folhas usadas por visita ao banheiro: {{sheetsPerUse}}</h1>
             <mat-slider [(value)]="sheetsPerUse" (input)="sheetsPerUse = $event.value; calculateDays()" min="1" max="50" step="1"></mat-slider>
             
-            <h1 class="is-size-5 no-margin-bottom margin-top">Idas ao banheiro por dia: {{usesPerDay}}</h1>
+            <h1 class="is-size-5 no-margin-bottom margin-top">Idas ao banheiro por dia (por pessoa): {{usesPerDay}}</h1>
             <mat-slider [(value)]="usesPerDay" (input)="usesPerDay = $event.value; calculateDays()"min="1" max="10" step="1"></mat-slider>
 
             <h1 class="is-size-5 no-margin-bottom margin-top">Folhas por rolo: {{sheetsPerRoll}}</h1>
