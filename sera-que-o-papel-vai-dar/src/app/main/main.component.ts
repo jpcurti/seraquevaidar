@@ -31,23 +31,23 @@ export class MainComponent implements OnInit {
     this.percentageSurviving = Math.floor((this.daysSurviving/this.quarentineDays)*100);
     switch(true) { 
       case (this.percentageSurviving<50): { 
-        this.resultHashtagMessage= '#tonoaperto #seraqueopapelvaidar?'; 
+        this.resultHashtagMessage= '#tonoaperto #seraqueopapelvaidar'; 
          break; 
       } 
       case (this.percentageSurviving<100): { 
-        this.resultHashtagMessage= '#horadeeconomizar #seraqueopapelvaidar?'; 
+        this.resultHashtagMessage= '#horadeeconomizar #seraqueopapelvaidar'; 
          break; 
       } 
       case (this.percentageSurviving<150): { 
-        this.resultHashtagMessage= '#totranquilo #seraqueopapelvaidar?'; 
+        this.resultHashtagMessage= '#totranquilo #seraqueopapelvaidar'; 
          break; 
       } 
       case (this.percentageSurviving>=150): { 
-        this.resultHashtagMessage= '#aquitasobrando #seraqueopapelvaidar?'; 
+        this.resultHashtagMessage= '#aquitasobrando #seraqueopapelvaidar'; 
          break; 
       } 
       default: { 
-        this.resultHashtagMessage= '#seraqueopapelvaidar?';  
+        this.resultHashtagMessage= '#seraqueopapelvaidar';  
          break; 
       } 
    } 
