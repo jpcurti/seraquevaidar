@@ -42,7 +42,7 @@
     <div class="container">
 
         <h1 class="is-size-5 no-margin-bottom margin-top">Quantidade de rolos estocados: {{rolls}}</h1>
-        <mat-slider [(value)]="rolls" (input)="rolls = $event.value; calculateDays()" min="1" max="100" step="1"></mat-slider>
+        <mat-slider [(value)]="rolls" (input)="rolls = $event.value; calculateDays()" min="0" max="100" step="1"></mat-slider>
         
         <h1 class="is-size-5 no-margin-bottom margin-top">Pessoas na casa: {{numPeople}}</h1>
         <mat-slider [(value)]="numPeople" (input)="numPeople = $event.value; calculateDays()" min="1" max="10" step="1"></mat-slider>
@@ -52,17 +52,23 @@
           </div>
 
         <div *ngIf=showAdvancedOptions class="container">
+
+            <h1 class="is-size-5 no-margin-bottom margin-top">Período de quarentena: {{quarentineDays}} dias</h1>
+            <mat-slider [(value)]="quarentineDays" (input)="quarentineDays = $event.value; calculateDays()"min="1" max="120" step="1"></mat-slider>
+
             <h1 class="is-size-5 no-margin-bottom margin-top ">Folhas usadas por visita ao banheiro: {{sheetsPerUse}}</h1>
             <mat-slider [(value)]="sheetsPerUse" (input)="sheetsPerUse = $event.value; calculateDays()" min="1" max="50" step="1"></mat-slider>
             
             <h1 class="is-size-5 no-margin-bottom margin-top">Idas ao banheiro por dia (por pessoa): {{usesPerDay}}</h1>
             <mat-slider [(value)]="usesPerDay" (input)="usesPerDay = $event.value; calculateDays()"min="1" max="10" step="1"></mat-slider>
 
-            <h1 class="is-size-5 no-margin-bottom margin-top">Folhas por rolo: {{sheetsPerRoll}}</h1>
-            <mat-slider [(value)]="sheetsPerRoll" (input)="sheetsPerRoll = $event.value; calculateDays()"min="1" max="500" step="1"></mat-slider>
+            <h1 class="is-size-5 no-margin-bottom margin-top">Metragem do rolo: {{lengthRoll}} metros</h1>
+            <mat-slider [(value)]="lengthRoll" (input)="lengthRoll = $event.value; calculateDays()"min="1" max="100" step="1"></mat-slider>
 
-            <h1 class="is-size-5 no-margin-bottom margin-top">Período de quarentena: {{quarentineDays}} dias</h1>
-            <mat-slider [(value)]="quarentineDays" (input)="quarentineDays = $event.value; calculateDays()"min="1" max="120" step="1"></mat-slider>
+            <h1 class="is-size-5 no-margin-bottom margin-top">Comprimento da folha: {{lengthSheet}} centimetros</h1>
+            <mat-slider [(value)]="lengthSheet" (input)="lengthSheet = $event.value; calculateDays()"min="10" max="20" step="1"></mat-slider>
+            
+
         </div>
     </div>
 
@@ -83,11 +89,10 @@
     <footer class="page-footer font-small blue">
 
         <!-- Copyright -->
-        <div class="container margin-top page-footer ">
+        <div class="container double-margin-top page-footer ">
 
             <h6 class="subtitle has-text-centered is-6">E-Mail de contato: <a href="mailto:contato@seraqueopapelvaidar.com.br">contato@seraqueopapelvaidar.com.br</a></h6>
-            <h6 class="subtitle has-text-centered is-6">Uma versão brasileira do original <a href="https://howmuchtoiletpaper.com">How much toilet paper?</a>. Todos direitos reservados aos criadores website original: Ben Sassoon e Sam Harris.</h6>
-            <h6 class="subtitle has-text-centered is-6">A brazilian portuguese version of the original website  <a href="https://howmuchtoiletpaper.com">How much toilet paper?</a>. All Rights Reserved by the creators of the original website: Ben Sassoon and Sam Harris.</h6>
+            <h6 class="subtitle has-text-centered is-6">Uma versão brasileira do original <a href="https://howmuchtoiletpaper.com">How much toilet paper?</a></h6>
         </div> 
         <!-- Copyright -->
   
