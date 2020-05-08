@@ -1,7 +1,7 @@
 # SeraQueOPapelVaiDar
 
 This is a simple webapp done with Angular for learning purposes. The WebApp displays an simulator of how much toilet paper would be needed during an Covid lockdown.
-!()[readme_picture.png]
+![](readme_picture.png)
 
 The result can be checked on https://seraqueopapelvaidar.com.br
 
